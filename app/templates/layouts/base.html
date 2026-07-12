@@ -8,12 +8,47 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
+    <!-- SEO -->
+    <meta name="description"
+          content="SmartProctor - Professional Browser-Based Online Examination Monitoring System">
+
+    <meta name="author"
+          content="Anbarasu N">
+
+    <meta name="theme-color"
+          content="#2563eb">
+
+    <!-- Website Title -->
     <title>
         {% block title %}
             SmartProctor
         {% endblock %}
     </title>
 
+    <!-- Favicon -->
+    <link rel="icon"
+          type="image/png"
+          sizes="96x96"
+          href="{{ url_for('static', filename='images/favicon-96x96.png') }}?v=v1">
+
+    <link rel="icon"
+          type="image/svg+xml"
+          href="{{ url_for('static', filename='images/favicon.svg') }}?v=v1">
+
+    <link rel="shortcut icon"
+          href="{{ url_for('static', filename='images/favicon.ico') }}?v=v1">
+
+    <link rel="apple-touch-icon"
+          sizes="180x180"
+          href="{{ url_for('static', filename='images/apple-touch-icon.png') }}?v=v1">
+
+    <meta name="apple-mobile-web-app-title"
+          content="SmartProctor">
+
+    <link rel="manifest"
+          href="{{ url_for('static', filename='images/site.webmanifest') }}?v=v1">
+
+    <!-- CSS -->
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/style.css') }}">
 
@@ -37,6 +72,7 @@
 
     {% include 'layouts/footer.html' %}
 
+    <!-- JavaScript -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
     {% block scripts %}
