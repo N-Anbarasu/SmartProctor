@@ -1,6 +1,7 @@
 from flask import Flask
 
-from config.config import Config
+from config import Config
+
 from app.extensions import (
     db,
     migrate,
@@ -17,7 +18,7 @@ def create_app(config_class=Config):
 
     app = Flask(__name__)
 
-    # Load configuration
+    # Load Configuration
     app.config.from_object(config_class)
 
     # Initialize Extensions
@@ -26,7 +27,10 @@ def create_app(config_class=Config):
     login_manager.init_app(app)
     socketio.init_app(app)
 
-    # Register Blueprints
+    # Load Flask-Login User Loader
+    from app.services import user_loader
+
+    # Import Blueprints
     from app.routes.home import home_bp
     from app.routes.auth import auth_bp
     from app.routes.student import student_bp
@@ -35,6 +39,7 @@ def create_app(config_class=Config):
     from app.routes.monitor import monitor_bp
     from app.routes.report import report_bp
 
+    # Register Blueprints
     app.register_blueprint(home_bp)
     app.register_blueprint(auth_bp)
     app.register_blueprint(student_bp)
