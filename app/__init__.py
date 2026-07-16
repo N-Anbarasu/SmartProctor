@@ -21,14 +21,26 @@ def create_app(config_class=Config):
     # Load Configuration
     app.config.from_object(config_class)
 
+
     # Initialize Extensions
     db.init_app(app)
     migrate.init_app(app, db)
     login_manager.init_app(app)
     socketio.init_app(app)
 
+
+    # Load Database Models
+    # Required for Flask-Migrate to detect tables
+    from app.models import (
+        User,
+        Student,
+        Teacher
+    )
+
+
     # Load Flask-Login User Loader
     from app.services import user_loader
+
 
     # Import Blueprints
     from app.routes.home import home_bp
@@ -39,6 +51,7 @@ def create_app(config_class=Config):
     from app.routes.monitor import monitor_bp
     from app.routes.report import report_bp
 
+
     # Register Blueprints
     app.register_blueprint(home_bp)
     app.register_blueprint(auth_bp)
@@ -47,5 +60,6 @@ def create_app(config_class=Config):
     app.register_blueprint(exam_bp)
     app.register_blueprint(monitor_bp)
     app.register_blueprint(report_bp)
+
 
     return app
