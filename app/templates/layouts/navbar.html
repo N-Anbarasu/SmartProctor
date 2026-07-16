@@ -1,5 +1,41 @@
-<nav>
+<nav class="navbar">
 
-    <h2>SmartProctor</h2>
+    <div class="logo">
+
+        <img
+            src="{{ url_for('static', filename='images/favicon-96x96.png') }}"
+            alt="SmartProctor">
+
+        <span>SmartProctor</span>
+
+    </div>
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="{{ url_for('home.home') }}">Home</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('home.features') }}">Features</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('home.about') }}">About</a>
+        </li>
+
+        <li>
+            <a href="{{ url_for('home.contact') }}">Contact</a>
+        </li>
+
+    </ul>
+
+    <a
+        href="{{ url_for('auth.login') }}"
+        class="login-button">
+
+        Login
+
+    </a>
 
 </nav>

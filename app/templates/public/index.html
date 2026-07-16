@@ -1,19 +1,75 @@
 {% extends "layouts/base.html" %}
 
 {% block title %}
-Home
+SmartProctor
 {% endblock %}
 
 {% block content %}
 
-<h1>Welcome to SmartProctor</h1>
+<section class="hero">
 
-<p>
-    Professional Browser-Based Online Examination Monitoring System
-</p>
+    <div class="hero-left">
 
-<a href="{{ url_for('auth.login') }}">
-    Login
-</a>
+        <span class="hero-badge">
+            Browser-Based Online Examination Monitoring
+        </span>
+
+        <h1>
+            Secure Online Exams with
+            <span>SmartProctor</span>
+        </h1>
+
+        <p>
+            SmartProctor is an AI-powered online examination monitoring platform
+            designed for educational institutions. Conduct secure browser-based
+            examinations, monitor students in real time, detect suspicious
+            activities, and generate comprehensive examination reports from a
+            single platform.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="{{ url_for('auth.login') }}" class="btn-primary">
+                Login
+            </a>
+
+            <a href="{{ url_for('home.features') }}" class="btn-secondary">
+                Explore Features
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-right">
+
+    <div class="hero-image-box">
+
+        <div class="shield">
+
+    <img 
+        src="{{ url_for('static', filename='images/favicon.svg') }}"
+        alt="SmartProctor Logo">
+
+</div>
+
+        <h3>SmartProctor</h3>
+
+        <p>
+            Secure AI-Based Examination Monitoring
+        </p>
+
+        <div class="monitor-status">
+
+            <span class="status-dot"></span>
+            Live Monitoring Active
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
 
 {% endblock %}

@@ -1,24 +1,59 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>SmartProctor Login</title>
-</head>
+{% extends "layouts/base.html" %}
 
-<body>
+{% block title %}
+Login
+{% endblock %}
 
-<h1>SmartProctor</h1>
+{% block content %}
 
-<h2>Select Login Type</h2>
+<section class="login-selection">
 
-<a href="/auth/student-login">
-    Student Login
-</a>
+    <div class="login-header">
 
-<br><br>
+        <h1>Choose Login Type</h1>
 
-<a href="/auth/teacher-login">
-    Teacher Login
-</a>
+        <p>
 
-</body>
-</html>
+            Select how you want to access SmartProctor.
+
+        </p>
+
+    </div>
+
+    <div class="login-cards">
+
+        <a
+        href="{{ url_for('auth.student_login') }}"
+        class="login-card">
+
+            <h2>Student</h2>
+
+            <p>
+
+                Join examinations, attend online tests,
+                monitor exam status and view results.
+
+            </p>
+
+        </a>
+
+        <a
+        href="{{ url_for('auth.teacher_login') }}"
+        class="login-card">
+
+            <h2>Teacher</h2>
+
+            <p>
+
+                Create examinations, monitor students,
+                manage reports and view analytics.
+
+            </p>
+
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

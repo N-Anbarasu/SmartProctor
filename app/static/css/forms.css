@@ -1,0 +1,182 @@
+.login-selection{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    padding:90px 30px;
+
+}
+
+.login-header{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.login-header h1{
+
+    font-size:42px;
+
+    margin-bottom:15px;
+
+}
+
+.login-header p{
+
+    color:#64748b;
+
+}
+
+.login-cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+.login-card{
+
+    background:white;
+
+    padding:45px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.login-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 20px 45px rgba(37,99,235,.15);
+
+}
+
+.login-card h2{
+
+    margin-bottom:20px;
+
+    color:#2563eb;
+
+}
+
+.login-card p{
+
+    color:#64748b;
+
+    line-height:1.8;
+
+}
+.auth-page{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:80px 20px;
+
+}
+
+.auth-card{
+
+    width:460px;
+
+    background:white;
+
+    border-radius:16px;
+
+    padding:45px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.auth-logo{
+
+    width:72px;
+
+    margin:auto;
+
+    margin-bottom:20px;
+
+}
+
+.auth-card h1{
+
+    text-align:center;
+
+    margin-bottom:10px;
+
+}
+
+.auth-card p{
+
+    text-align:center;
+
+    color:#64748b;
+
+    margin-bottom:35px;
+
+}
+
+.form-group{
+
+    display:flex;
+
+    flex-direction:column;
+
+    margin-bottom:20px;
+
+}
+
+.form-group label{
+
+    margin-bottom:8px;
+
+    font-weight:600;
+
+}
+
+.form-group input{
+
+    padding:14px;
+
+    border:1px solid #d1d5db;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    transition:.2s;
+
+}
+
+.form-group input:focus{
+
+    outline:none;
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 0 3px rgba(37,99,235,.15);
+
+}
+
+.full-width{
+
+    width:100%;
+
+    margin-top:10px;
+
+}

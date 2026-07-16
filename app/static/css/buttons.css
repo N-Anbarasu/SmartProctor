@@ -1,0 +1,41 @@
+.btn-primary{
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:15px 34px;
+
+    border-radius:8px;
+
+    font-weight:600;
+
+}
+
+.btn-primary:hover{
+
+    background:#1d4ed8;
+
+}
+
+.btn-secondary{
+
+    border:2px solid #2563eb;
+
+    color:#2563eb;
+
+    padding:15px 34px;
+
+    border-radius:8px;
+
+    font-weight:600;
+
+}
+
+.btn-secondary:hover{
+
+    background:#2563eb;
+
+    color:white;
+
+}
