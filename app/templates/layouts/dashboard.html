@@ -1,24 +1,60 @@
-{% extends "layouts/base.html" %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block content %}
+<head>
 
-<div class="dashboard-layout">
+<meta charset="UTF-8">
 
-    {% include "layouts/sidebar.html" %}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>
+SmartProctor Dashboard
+</title>
+
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+
+</head>
+
+
+<body>
+
+
+<div class="dashboard-wrapper">
+
+
+    {% block sidebar %}
+    {% endblock %}
+
+
 
     <div class="dashboard-main">
 
-        {% include "layouts/topbar.html" %}
 
-        <div class="dashboard-content">
+        {% block topbar %}
+        {% endblock %}
+
+
+
+        <main class="dashboard-content">
 
             {% block dashboard_content %}
             {% endblock %}
 
-        </div>
+        </main>
+
 
     </div>
 
+
 </div>
 
-{% endblock %}
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+
+</body>
+
+</html>

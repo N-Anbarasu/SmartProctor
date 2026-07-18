@@ -1,54 +1,121 @@
-{% extends "layouts/base.html" %}
+{% extends "layouts/dashboard.html" %}
 
-{% block title %}
-Student Dashboard
+
+{% block sidebar %}
+
+{% include "layouts/student_sidebar.html" %}
+
 {% endblock %}
 
 
-{% block content %}
 
-<section class="dashboard-page">
+{% block topbar %}
 
-    <div class="dashboard-header">
+{% include "layouts/topbar.html" %}
 
-        <h1>
-            Welcome, {{ user.email }}
-        </h1>
+{% endblock %}
+
+
+
+{% block dashboard_content %}
+
+
+<section class="dashboard-header">
+
+    <h1>
+        Welcome, {{ current_user.email }}
+    </h1>
+
+    <p>
+        Manage your examinations, track progress and stay updated.
+    </p>
+
+</section>
+
+
+
+<section class="dashboard-cards">
+
+
+    <div class="dashboard-card">
+
+        <h3>
+            Join Examination
+        </h3>
 
         <p>
-            Manage your examinations and monitor your progress.
+            Enter your exam room code and start your online examination.
+        </p>
+
+        <button>
+            Join Exam
+        </button>
+
+    </div>
+
+
+
+    <div class="dashboard-card">
+
+        <h3>
+            Upcoming Exams
+        </h3>
+
+        <p>
+            View scheduled examinations assigned to you.
         </p>
 
     </div>
 
 
-    <div class="dashboard-cards">
 
-        <div class="dashboard-card">
-            <h2>Available Exams</h2>
-            <p>
-                View and attend upcoming examinations.
-            </p>
-        </div>
+    <div class="dashboard-card">
 
+        <h3>
+            Exam History
+        </h3>
 
-        <div class="dashboard-card">
-            <h2>Exam History</h2>
-            <p>
-                Check completed examinations.
-            </p>
-        </div>
-
-
-        <div class="dashboard-card">
-            <h2>Results</h2>
-            <p>
-                View examination performance.
-            </p>
-        </div>
+        <p>
+            Review your previously attended examinations.
+        </p>
 
     </div>
 
+
+
+    <div class="dashboard-card">
+
+        <h3>
+            Results
+        </h3>
+
+        <p>
+            Check your examination performance.
+        </p>
+
+    </div>
+
+
+
 </section>
+
+
+
+<section class="dashboard-panel">
+
+
+    <h2>
+        Recent Activity
+    </h2>
+
+
+    <p>
+        No recent examinations available.
+    </p>
+
+
+</section>
+
+
 
 {% endblock %}

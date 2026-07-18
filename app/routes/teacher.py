@@ -14,6 +14,5 @@ teacher_bp = Blueprint(
 def dashboard():
 
     return render_template(
-        "teacher/dashboard.html",
-        user=current_user
+        "teacher/dashboard.html"
     )

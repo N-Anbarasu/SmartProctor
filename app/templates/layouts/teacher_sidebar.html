@@ -1,0 +1,64 @@
+<aside class="sidebar">
+
+
+    <div class="sidebar-logo">
+
+        <img src="{{ url_for('static', filename='images/favicon-96x96.png') }}">
+
+        <h2>SmartProctor</h2>
+
+    </div>
+
+
+    <nav>
+
+
+        <a href="#">
+            Dashboard
+        </a>
+
+
+        <a href="#">
+            Create Exam
+        </a>
+
+
+        <a href="#">
+            Manage Exams
+        </a>
+
+
+        <a href="#">
+            Question Papers
+        </a>
+
+
+        <a href="#">
+            Live Monitoring
+        </a>
+
+
+        <a href="#">
+            Students
+        </a>
+
+
+        <a href="#">
+            Reports
+        </a>
+
+
+        <a href="#">
+            Analytics
+        </a>
+
+
+        <a href="{{ url_for('auth.logout') }}">
+            Logout
+        </a>
+
+
+    </nav>
+
+
+</aside>

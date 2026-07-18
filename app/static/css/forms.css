@@ -180,3 +180,49 @@
     margin-top:10px;
 
 }
+/* ==========================
+   FLASH MESSAGES
+========================== */
+
+.flash-container{
+    position:fixed;
+    top:25px;
+    right:25px;
+    z-index:9999;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.flash-message{
+    min-width:320px;
+    padding:16px 22px;
+    border-radius:12px;
+    color:#fff;
+    font-weight:600;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+    animation:slideIn .35s ease;
+}
+
+.flash-message.success{
+    background:#16a34a;
+}
+
+.flash-message.danger{
+    background:#dc2626;
+}
+
+.flash-message.warning{
+    background:#d97706;
+}
+
+@keyframes slideIn{
+    from{
+        opacity:0;
+        transform:translateX(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}

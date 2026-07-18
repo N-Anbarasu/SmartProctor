@@ -31,6 +31,7 @@ Teacher Login
                 type="email"
                 name="email"
                 placeholder="Enter your email"
+                value="{{ request.form.get('email','') }}"
                 required>
 
             </div>
