@@ -8,7 +8,6 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
     <meta name="description"
           content="SmartProctor - Professional Browser-Based Online Examination Monitoring System">
 
@@ -18,14 +17,13 @@
     <meta name="theme-color"
           content="#2563eb">
 
-    <!-- Website Title -->
     <title>
         {% block title %}
             SmartProctor
         {% endblock %}
     </title>
 
-    <!-- Favicon -->
+    <!-- Favicons -->
     <link rel="icon"
           type="image/png"
           sizes="96x96"
@@ -48,7 +46,7 @@
     <link rel="manifest"
           href="{{ url_for('static', filename='images/site.webmanifest') }}?v=v1">
 
-    <!-- CSS -->
+    <!-- Global CSS -->
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/style.css') }}">
 
@@ -59,20 +57,9 @@
 
 <body>
 
-    {% include 'layouts/navbar.html' %}
+    {% block layout %}
+    {% endblock %}
 
-    {% include 'layouts/flash_messages.html' %}
-
-    <main>
-
-        {% block content %}
-        {% endblock %}
-
-    </main>
-
-    {% include 'layouts/footer.html' %}
-
-    <!-- JavaScript -->
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 
     {% block scripts %}

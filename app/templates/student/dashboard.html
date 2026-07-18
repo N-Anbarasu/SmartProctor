@@ -1,0 +1,54 @@
+{% extends "layouts/base.html" %}
+
+{% block title %}
+Student Dashboard
+{% endblock %}
+
+
+{% block content %}
+
+<section class="dashboard-page">
+
+    <div class="dashboard-header">
+
+        <h1>
+            Welcome, {{ user.email }}
+        </h1>
+
+        <p>
+            Manage your examinations and monitor your progress.
+        </p>
+
+    </div>
+
+
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card">
+            <h2>Available Exams</h2>
+            <p>
+                View and attend upcoming examinations.
+            </p>
+        </div>
+
+
+        <div class="dashboard-card">
+            <h2>Exam History</h2>
+            <p>
+                Check completed examinations.
+            </p>
+        </div>
+
+
+        <div class="dashboard-card">
+            <h2>Results</h2>
+            <p>
+                View examination performance.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

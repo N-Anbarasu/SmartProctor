@@ -1,0 +1,18 @@
+{% extends "layouts/base.html" %}
+
+{% block layout %}
+
+    {% include "layouts/navbar.html" %}
+
+    {% include "layouts/flash_messages.html" %}
+
+    <main>
+
+        {% block content %}
+        {% endblock %}
+
+    </main>
+
+    {% include "layouts/footer.html" %}
+
+{% endblock %}

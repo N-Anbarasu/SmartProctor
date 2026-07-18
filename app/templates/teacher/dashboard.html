@@ -1,0 +1,54 @@
+{% extends "layouts/dashboard.html" %}
+
+{% block title %}
+Teacher Dashboard
+{% endblock %}
+
+
+{% block dashboard_content %}
+
+<section class="dashboard-page">
+
+    <div class="dashboard-header">
+
+        <h1>
+            Welcome, {{ user.email }}
+        </h1>
+
+        <p>
+            Manage examinations, students and monitoring reports.
+        </p>
+
+    </div>
+
+
+    <div class="dashboard-cards">
+
+        <div class="dashboard-card">
+            <h2>Create Examination</h2>
+            <p>
+                Create and schedule online examinations.
+            </p>
+        </div>
+
+
+        <div class="dashboard-card">
+            <h2>Live Monitoring</h2>
+            <p>
+                Monitor students during examinations.
+            </p>
+        </div>
+
+
+        <div class="dashboard-card">
+            <h2>Reports</h2>
+            <p>
+                Analyze examination activity and results.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
